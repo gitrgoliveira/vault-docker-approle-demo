@@ -2,6 +2,8 @@
 
 This example shows what is expected from a secure AppRole workflow.
 
+Inspired by the Learn guide: https://learn.hashicorp.com/vault/developer/approle
+
 ## Requirements
 
 This demo was developed to work in MacOS.
@@ -39,7 +41,6 @@ There should be 2 different personas that are able to retrieve a part of the app
 If a single identity is able to retrieve both, then they are also able to login to Vault and impersonate the application.
 
 **This value is wrapped** in this use case, but beware because a wrapped secret can only be read once, which may not work well when you have replicas.
-
 
 ## Run
 When the application starts, it has access to both `role_id` and `secret_id`.
