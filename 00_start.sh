@@ -5,7 +5,5 @@ export VAULT_TOKEN=root
 vault server -dev -dev-root-token-id=root -dev-listen-address=0.0.0.0:8200 &
 
 sleep 2
-# vault write /sys/license text=$(cat /Users/rgoliveira/Documents/vault_v2lic.hclic)
-
 # vault secrets enable -path=secret -version=2 kv
 vault kv put secret/mysql/webapp secret=password
