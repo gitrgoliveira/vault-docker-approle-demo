@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  demo_app:
+    image: demo_app:v1
+    environment:
+        - VAULT_ADDR=http://${HOST_IP}:8200
+    ports:
+        - "5000:5000"
+    secrets:
+        - secret_id
+
+secrets:
+  secret_id:
+    file: ./demo_app_secret_id
